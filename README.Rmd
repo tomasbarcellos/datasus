@@ -1,0 +1,49 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# datasus
+
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+<!-- badges: end -->
+
+Esse pacote objetiva disponibilizar os dados do datasus no R.
+
+## Installation
+
+Para instalar o pacote, rode o comando abaixo em seu console do R.
+
+``` r
+# install.packages("devtools")
+devtools::install_github("tomasbarcellos/datasus")
+```
+## Example
+
+Eis um exemplo de como usar o pacote
+
+```{r example}
+library(datasus)
+df_datasus <- datasus('SIASUS', 'dados', 'ACF', 18, 'SP', '01')
+df_datasus
+```
+
+
+Para saber os sistemas que estao disponiveis no datasus, basta usar a funcao 
+`sistemas_disponiveis()`.
+
+```{r}
+sistemas_disponiveis()
+```
+
